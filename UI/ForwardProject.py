@@ -279,11 +279,11 @@ class ForwardProject:
                                                  3*(Y-s_y)*s_z*np.sin(2*I)*np.sin(A))*10**9#单位nT
                         elif node.m_componentType== DataComponentType().Hax:
                             node.forwardData+=figure* \
-                                              (( 2*(X - s_x) ** 2 - (Y - s_y) ** 2-s_z**2) * np.cos(I) ** np.cos(A) -
+                                              (( 2*(X - s_x) ** 2 - (Y - s_y) ** 2-s_z**2) * np.cos(I) * np.cos(A) -
                                                3*s_z*(X-s_x)*np.sin(I)+3*(Y-s_y)*(X-s_x)*np.cos(I)*np.sin(A))*10**9
                         elif node.m_componentType== DataComponentType().Hay:
                             node.forwardData += figure * \
-                                                ((2*(Y - s_y) ** 2 -(X-s_x)**2- s_z ** 2) * np.cos(I) ** np.sin(
+                                                ((2*(Y - s_y) ** 2 -(X-s_x)**2- s_z ** 2) * np.cos(I) * np.sin(
                                                     A) -
                                                  3 * s_z * (Y - s_y) * np.sin(I) + 3 * (Y - s_y) * (X - s_x) * np.cos(
                                                             I) * np.cos(A)) * 10 ** 9
